@@ -5,7 +5,7 @@ class OperationJson:
 
     def __init__(self, file_path = None):
         if file_path == None:
-            self.file_path = 'C:/Users/Administrator/Desktop/interfaceTest/Dataconflg/data.json'
+            self.file_path = '/var/lib/jenkins/workspace/test/Dataconflg/data.json'
         else:
             self.file_path = file_path
         self.data = self.read_data()
@@ -22,10 +22,10 @@ class OperationJson:
 
     #写JSON
     def write_data(self, data):
-        with open('C:/Users/Administrator/Desktop/interfaceTest/Dataconflg/cooke.json', 'w') as fp:
+        with open('/var/lib/jenkins/workspace/test/Dataconflg/cooke.json', 'w') as fp:
             fp.write(json.dumps(data))
         
 
 if __name__ == '__main__':
     op = OperationJson()
-    print(op.get_data('jintian'))
+    print(op.get_data('shebei'))
